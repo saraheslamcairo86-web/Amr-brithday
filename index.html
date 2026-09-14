@@ -4,117 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إلى عزيزي عمرو</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4925RST07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D4925RST07');
-</script>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600&display=swap');
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:#d8c4a6;color:#513b2b;font-family:Amiri,serif;display:flex;align-items:center;justify-content:center;overflow-x:hidden}
-.scene{width:min(900px,96vw);padding:28px 10px 36px;text-align:center}
-.subtitle{font-size:18px;margin:0 0 18px;color:#70533b}
-.envelope{width:min(540px,88vw);height:min(350px,57vw);min-height:270px;margin:auto;position:relative;cursor:pointer;perspective:1200px;filter:drop-shadow(0 20px 23px rgba(65,42,24,.28))}
-.back{position:absolute;inset:0;border-radius:8px;background:linear-gradient(145deg,#f0dfc1,#d6ba91);border:1px solid #b89468}
-.back:after{content:"";position:absolute;inset:11px;border:1px solid rgba(112,78,43,.25);border-radius:4px}
-.letter{position:absolute;z-index:2;left:7%;width:86%;height:calc(100% - 48px);top:24px;padding:25px 30px 30px;text-align:right;overflow-y:auto;overflow-x:hidden;background:#f7ecd5;border:1px solid #c9ab7e;box-shadow:0 5px 14px rgba(72,47,27,.16);transition:transform 1.05s cubic-bezier(.2,.8,.2,1),z-index 0s linear 1.05s;scrollbar-width:thin;scrollbar-color:#b89468 transparent}
-.letter h1{margin:0 0 18px;text-align:center;font-size:27px}
-.letter p{font-size:17px;line-height:1.95;margin:0 0 14px}
-.signature{margin-top:22px;padding-bottom:4px;text-align:left;font-size:20px;font-weight:700}
-.scroll-cue{position:absolute;z-index:9;left:50%;bottom:13px;transform:translateX(-50%);background:rgba(247,236,213,.94);color:#694b31;border:1px solid rgba(155,116,76,.38);border-radius:20px;padding:5px 13px;font-size:13px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .35s}
-.open .scroll-cue{opacity:1}.scroll-cue.hidden{opacity:0}
-.pocket{position:absolute;z-index:5;inset:auto 0 0 0;height:73%;background:linear-gradient(145deg,#e7d0ab,#d3b58a);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border:1px solid #b89468}
-.flap{position:absolute;z-index:7;left:0;top:0;width:100%;height:73%;background:#ecd9b7;clip-path:polygon(0 0,100% 0,50% 72%);transform-origin:top center;transition:transform 1s cubic-bezier(.2,.8,.2,1);backface-visibility:hidden}
-.seal{position:absolute;z-index:10;left:50%;top:52%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 30% 23%,rgba(255,226,205,.45) 0 8%,rgba(255,226,205,.13) 22%,transparent 38%),radial-gradient(circle at 72% 78%,rgba(48,14,12,.34),transparent 48%),linear-gradient(145deg,#9b4d45 0%,#7d3834 48%,#5d2826 100%);border:1px solid rgba(75,27,24,.75);color:#d7b696;font-family:"Cormorant Garamond",Georgia,serif;font-size:11px;font-style:italic;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:inset 3px 3px 7px rgba(255,230,210,.18),inset -6px -7px 10px rgba(42,11,10,.36),0 6px 11px rgba(67,35,28,.28);text-shadow:1px 1px 1px rgba(255,220,190,.16),-1px -1px 1px rgba(45,15,14,.5);transition:opacity .5s,transform .5s}
-.seal:before{content:"";position:absolute;left:16px;top:10px;width:22px;height:9px;border-radius:50%;background:rgba(255,240,225,.2);filter:blur(2px);transform:rotate(-25deg);pointer-events:none}
-.seal:after{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(55,20,18,.22);box-shadow:inset 0 0 5px rgba(255,220,190,.09);pointer-events:none}
-.flower{position:absolute;z-index:11;left:calc(50% + 47px);top:calc(52% - 10px);font-size:27px;filter:sepia(.25);transform:rotate(-12deg);transition:opacity .4s}
-.ornament{position:absolute;z-index:9;color:#866044;font-size:21px}.o1{top:18px;left:22px}.o2{top:18px;right:22px}
-.hint{margin-top:20px;font-size:17px;color:#694b31;min-height:27px}
-.open .flap{transform:rotateX(180deg);z-index:1}.open .letter{transform:translateY(-235px);z-index:8}.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.45)}.open .flower{opacity:0}.open .hint{opacity:.8}
-@media(max-width:600px){
-.scene{padding-top:20px}.envelope{width:88vw;height:56vw;min-height:245px;max-height:310px}
-.letter{left:6%;width:88%;height:calc(100% - 38px);top:19px;padding:19px 20px 25px}
-.letter h1{font-size:23px;margin-bottom:14px}.letter p{font-size:15px;line-height:1.85;margin-bottom:12px}.signature{font-size:18px}
-.seal{width:61px;height:61px;font-size:10px}.flower{left:calc(50% + 40px);font-size:22px}
-.scroll-cue{bottom:9px;font-size:12px;padding:4px 10px}.open .letter{transform:translateY(-175px)}.hint{font-size:15px}}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:#d8c4a6;color:#513b2b;font-family:Amiri,serif;display:flex;align-items:center;justify-content:center;overflow-x:hidden}.scene{width:min(900px,96vw);padding:30px 10px;text-align:center}.subtitle{font-size:18px;margin:0 0 18px;color:#70533b}.envelope{width:min(620px,92vw);height:390px;margin:auto;position:relative;cursor:pointer;perspective:1200px;filter:drop-shadow(0 22px 25px rgba(65,42,24,.28))}.back{position:absolute;inset:0;border-radius:8px;background:linear-gradient(145deg,#f0dfc1,#d6ba91);border:1px solid #b89468}.back:after{content:"";position:absolute;inset:12px;border:1px solid rgba(112,78,43,.25);border-radius:4px}.letter{position:absolute;z-index:2;left:6%;width:88%;height:335px;top:28px;padding:28px 34px;text-align:right;overflow:auto;background:#f7ecd5;border:1px solid #c9ab7e;box-shadow:0 5px 14px rgba(72,47,27,.16);transition:transform 1.05s cubic-bezier(.2,.8,.2,1),z-index 0s linear 1.05s}.letter h1{margin:0 0 20px;text-align:center;font-size:29px}.letter p{font-size:18px;line-height:2;margin:0 0 15px}.signature{margin-top:24px;text-align:left;font-size:21px;font-weight:700}.pocket{position:absolute;z-index:5;inset:auto 0 0 0;height:73%;background:linear-gradient(145deg,#e7d0ab,#d3b58a);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border:1px solid #b89468}.flap{position:absolute;z-index:7;left:0;top:0;width:100%;height:73%;background:#ecd9b7;clip-path:polygon(0 0,100% 0,50% 72%);transform-origin:top center;transition:transform 1s cubic-bezier(.2,.8,.2,1);backface-visibility:hidden}.seal{position:absolute;z-index:10;left:50%;top:52%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 30% 23%,rgba(255,226,205,.45) 0 8%,rgba(255,226,205,.13) 22%,transparent 38%),radial-gradient(circle at 72% 78%,rgba(48,14,12,.34),transparent 48%),linear-gradient(145deg,#9b4d45 0%,#7d3834 48%,#5d2826 100%);border:1px solid rgba(75,27,24,.75);color:#d7b696;font-family:"Cormorant Garamond",Georgia,serif;font-size:11px;font-style:italic;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:inset 3px 3px 7px rgba(255,230,210,.18),inset -6px -7px 10px rgba(42,11,10,.36),0 6px 11px rgba(67,35,28,.28);text-shadow:1px 1px 1px rgba(255,220,190,.16),-1px -1px 1px rgba(45,15,14,.5);transition:opacity .5s,transform .5s}.seal:before{content:"";position:absolute;left:17px;top:11px;width:24px;height:10px;border-radius:50%;background:rgba(255,240,225,.2);filter:blur(2px);transform:rotate(-25deg);pointer-events:none}.seal:after{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(55,20,18,.22);box-shadow:inset 0 0 5px rgba(255,220,190,.09);pointer-events:none}.flower{position:absolute;z-index:11;left:calc(50% + 52px);top:calc(52% - 10px);font-size:29px;filter:sepia(.25);transform:rotate(-12deg)}.ornament{position:absolute;z-index:9;color:#866044;font-size:22px}.o1{top:20px;left:25px}.o2{top:20px;right:25px}.hint{margin-top:22px;font-size:17px;color:#694b31}.open .flap{transform:rotateX(180deg);z-index:1}.open .letter{transform:translateY(-245px);z-index:8}.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.45)}.open .flower{opacity:0;transition:.4s}.open .hint{opacity:.7}@media(max-width:600px){.envelope{height:310px}.letter{height:265px;padding:20px 22px;top:22px}.letter h1{font-size:24px}.letter p{font-size:15px;line-height:1.85}.signature{font-size:18px}.seal{width:66px;height:60px;font-size:13px}.flower{font-size:23px}.open .letter{transform:translateY(-190px)}}
 </style>
 </head>
-
 <body>
 <div class="scene">
 <p class="subtitle">رسالة صغيرة 💌</p>
-
 <div class="envelope" id="envelope" title="اضغط لفتح الرسالة">
 <div class="back"></div>
 <div class="ornament o1">❦</div><div class="ornament o2">❦</div>
-
-<div class="letter" id="letter">
+<div class="letter">
 <h1>إلى عزيزي عمرو</h1>
-
 <p>في يوم ميلادك المميز، أتمنى أن تدرك ماذا تعني لي، لأنك تعني لي الكثير. وكلماتي تُكتب شيئًا فشيئًا بحبرٍ لا يستخدمه إلا قلبي فقط… فهل يراه قلبك أيضًا؟</p>
-
 <p>عزيزي، أتمنى أن تحيا يومًا لطيفًا، وحياةً مزدهرة، مطمئنة وسارّة، وأن تكون فيها بخير، سعيدًا او مسرورًا؟ هيهي<br>هل ابتسمت؟ ذلك يسرّني فعلًا ^_^</p>
-
 <p>لم تُمنح لي الفرصة في الأيام الماضية لأقول لك إنني أدعو لك في خَبَأ الليل، أن يوفقك الله فيما تسعى إليه، وأن يبلغك ما تتمنى بعد كل هذا السعي.</p>
-
 <p>ولا أخفي عليك أنني حزنت حين لم أستطع أن أُظهر دعمي لك كما كنت أتمنى في وقتٍ كان مهمًا لك، لكنني لا أستطيع أن أخفي ذلك الآن أيضًا، رغم أن قلبي يرتجف دائمًا خوفًا من أن يُرفض حين يحاول جاهدًا أن يُسمِع.</p>
-
 <p>كنت دائمًا، وما زلت، مرشدًا ومساندًا لي، ممتنة لوجودك في حياتي، و كل عام وأنت بخير، أتمنى ان يكون عامك الجديد رحيمًا بقلبك، وأن تجد فيه ما يستحق كل هذا السعي.💓</p>
-
 <div class="signature">داعمتك للأبد، سارة</div>
 </div>
-
-<div class="scroll-cue" id="scrollCue">↓ اسحب لأسفل لقراءة باقي الرسالة ↓</div>
 <div class="flap"></div><div class="pocket"></div><div class="seal">S</div><div class="flower">✿</div>
 </div>
-
-<div class="hint" id="hint">اضغط على الظرف لفتح الرسالة ✉️</div>
+<div class="hint" id="hint">اضغطي على الظرف لفتح الرسالة ✉️</div>
 </div>
-
-<script>
-const envelope=document.getElementById('envelope'),
-      letter=document.getElementById('letter'),
-      hint=document.getElementById('hint'),
-      scrollCue=document.getElementById('scrollCue');
-
-envelope.addEventListener('click',()=>{
-  envelope.classList.toggle('open');
-
-  if(envelope.classList.contains('open')){
-
-    // تسجيل فتح الظرف في Google Analytics
-    gtag('event','birthday_message_opened');
-
-    hint.textContent='الرسالة لك 💌';
-
-    setTimeout(()=>{
-      if(letter.scrollHeight<=letter.clientHeight+5)
-        scrollCue.classList.add('hidden');
-    },1100);
-
-  }else{
-    hint.textContent='اضغط على الظرف لفتح الرسالة ✉️';
-    scrollCue.classList.remove('hidden');
-  }
-});
-
-letter.addEventListener('scroll',()=>{
-  const atBottom=letter.scrollTop+letter.clientHeight>=letter.scrollHeight-12;
-
-  if(atBottom)
-    scrollCue.classList.add('hidden');
-  else if(envelope.classList.contains('open'))
-    scrollCue.classList.remove('hidden');
-});
-</script>
-
+<script>const e=document.getElementById('envelope'),h=document.getElementById('hint');e.addEventListener('click',()=>{e.classList.toggle('open');h.textContent=e.classList.contains('open')?'الرسالة لكِ 💌':'اضغطي على الظرف لفتح الرسالة ✉️'});</script>
 </body>
 </html>
