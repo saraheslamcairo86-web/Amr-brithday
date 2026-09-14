@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إلى عزيزي عمرو</title>
+
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4HTM4VWYF"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4925RST07"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-E4HTM4VWYF');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D4925RST07');
 </script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600&display=swap');
 *{box-sizing:border-box}
@@ -44,44 +47,74 @@ body{margin:0;min-height:100vh;background:#d8c4a6;color:#513b2b;font-family:Amir
 .scroll-cue{bottom:9px;font-size:12px;padding:4px 10px}.open .letter{transform:translateY(-175px)}.hint{font-size:15px}}
 </style>
 </head>
+
 <body>
 <div class="scene">
 <p class="subtitle">رسالة صغيرة 💌</p>
+
 <div class="envelope" id="envelope" title="اضغط لفتح الرسالة">
 <div class="back"></div>
 <div class="ornament o1">❦</div><div class="ornament o2">❦</div>
+
 <div class="letter" id="letter">
 <h1>إلى عزيزي عمرو</h1>
+
 <p>في يوم ميلادك المميز، أتمنى أن تدرك ماذا تعني لي، لأنك تعني لي الكثير. وكلماتي تُكتب شيئًا فشيئًا بحبرٍ لا يستخدمه إلا قلبي فقط… فهل يراه قلبك أيضًا؟</p>
+
 <p>عزيزي، أتمنى أن تحيا يومًا لطيفًا، وحياةً مزدهرة، مطمئنة وسارّة، وأن تكون فيها بخير، سعيدًا او مسرورًا؟ هيهي<br>هل ابتسمت؟ ذلك يسرّني فعلًا ^_^</p>
+
 <p>لم تُمنح لي الفرصة في الأيام الماضية لأقول لك إنني أدعو لك في خَبَأ الليل، أن يوفقك الله فيما تسعى إليه، وأن يبلغك ما تتمنى بعد كل هذا السعي.</p>
+
 <p>ولا أخفي عليك أنني حزنت حين لم أستطع أن أُظهر دعمي لك كما كنت أتمنى في وقتٍ كان مهمًا لك، لكنني لا أستطيع أن أخفي ذلك الآن أيضًا، رغم أن قلبي يرتجف دائمًا خوفًا من أن يُرفض حين يحاول جاهدًا أن يُسمِع.</p>
+
 <p>كنت دائمًا، وما زلت، مرشدًا ومساندًا لي، ممتنة لوجودك في حياتي، و كل عام وأنت بخير، أتمنى ان يكون عامك الجديد رحيمًا بقلبك، وأن تجد فيه ما يستحق كل هذا السعي.💓</p>
+
 <div class="signature">داعمتك للأبد، سارة</div>
 </div>
+
 <div class="scroll-cue" id="scrollCue">↓ اسحب لأسفل لقراءة باقي الرسالة ↓</div>
 <div class="flap"></div><div class="pocket"></div><div class="seal">S</div><div class="flower">✿</div>
 </div>
+
 <div class="hint" id="hint">اضغط على الظرف لفتح الرسالة ✉️</div>
 </div>
+
 <script>
-const envelope=document.getElementById('envelope'),letter=document.getElementById('letter'),hint=document.getElementById('hint'),scrollCue=document.getElementById('scrollCue');
+const envelope=document.getElementById('envelope'),
+      letter=document.getElementById('letter'),
+      hint=document.getElementById('hint'),
+      scrollCue=document.getElementById('scrollCue');
+
 envelope.addEventListener('click',()=>{
-envelope.classList.toggle('open');
-if(envelope.classList.contains('open')){
-hint.textContent='الرسالة لك 💌';
-gtag('event','open_envelope',{
-  event_category:'engagement',
-  event_label:'Birthday letter opened'
+  envelope.classList.toggle('open');
+
+  if(envelope.classList.contains('open')){
+
+    // تسجيل فتح الظرف في Google Analytics
+    gtag('event','birthday_message_opened');
+
+    hint.textContent='الرسالة لك 💌';
+
+    setTimeout(()=>{
+      if(letter.scrollHeight<=letter.clientHeight+5)
+        scrollCue.classList.add('hidden');
+    },1100);
+
+  }else{
+    hint.textContent='اضغط على الظرف لفتح الرسالة ✉️';
+    scrollCue.classList.remove('hidden');
+  }
 });
-setTimeout(()=>{if(letter.scrollHeight<=letter.clientHeight+5)scrollCue.classList.add('hidden')},1100);
-}else{hint.textContent='اضغط على الظرف لفتح الرسالة ✉️';scrollCue.classList.remove('hidden')}
-});
+
 letter.addEventListener('scroll',()=>{
-const atBottom=letter.scrollTop+letter.clientHeight>=letter.scrollHeight-12;
-if(atBottom)scrollCue.classList.add('hidden');
-else if(envelope.classList.contains('open'))scrollCue.classList.remove('hidden');
+  const atBottom=letter.scrollTop+letter.clientHeight>=letter.scrollHeight-12;
+
+  if(atBottom)
+    scrollCue.classList.add('hidden');
+  else if(envelope.classList.contains('open'))
+    scrollCue.classList.remove('hidden');
 });
 </script>
+
 </body>
 </html>
