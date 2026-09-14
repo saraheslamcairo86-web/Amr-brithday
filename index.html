@@ -70,6 +70,10 @@ envelope.addEventListener('click',()=>{
 envelope.classList.toggle('open');
 if(envelope.classList.contains('open')){
 hint.textContent='الرسالة لك 💌';
+gtag('event','open_envelope',{
+  event_category:'engagement',
+  event_label:'Birthday letter opened'
+});
 setTimeout(()=>{if(letter.scrollHeight<=letter.clientHeight+5)scrollCue.classList.add('hidden')},1100);
 }else{hint.textContent='اضغط على الظرف لفتح الرسالة ✉️';scrollCue.classList.remove('hidden')}
 });
